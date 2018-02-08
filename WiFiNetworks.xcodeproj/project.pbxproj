@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E157D477202984B6007556D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E157D476202984B6007556D8 /* AppDelegate.m */; };
+		E157D47A202984B6007556D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E157D479202984B6007556D8 /* ViewController.m */; };
+		E157D47D202984B6007556D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E157D47B202984B6007556D8 /* Main.storyboard */; };
+		E157D480202984B6007556D8 /* WiFiNetworks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E157D47E202984B6007556D8 /* WiFiNetworks.xcdatamodeld */; };
+		E157D482202984B6007556D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E157D481202984B6007556D8 /* Assets.xcassets */; };
+		E157D485202984B6007556D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E157D483202984B6007556D8 /* LaunchScreen.storyboard */; };
+		E157D488202984B6007556D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E157D487202984B6007556D8 /* main.m */; };
+		E157D492202984B6007556D8 /* WiFiNetworksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E157D491202984B6007556D8 /* WiFiNetworksTests.m */; };
+		E157D49D202984B6007556D8 /* WiFiNetworksUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E157D49C202984B6007556D8 /* WiFiNetworksUITests.m */; };
+		E157D4AC202984D8007556D8 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E157D4AB202984D8007556D8 /* NetworkExtension.framework */; };
+		E157D4AF20299578007556D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E157D4AE20299578007556D8 /* SystemConfiguration.framework */; };
+		E1AE0A3A202AF70900695C58 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE0A39202AF70900695C58 /* DeviceInfo.m */; };
+		E1AE0A42202B1E9400695C58 /* SocketConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE0A41202B1E9400695C58 /* SocketConnection.m */; };
+		E1AE0A45202B2E2300695C58 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE0A43202B2E2300695C58 /* Reachability.m */; };
+		E1B0BE092029D7F4009C9490 /* libSmartLink7.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B0BE072029D7F4009C9490 /* libSmartLink7.3.a */; };
+		E1C683C4202C2262008E7F75 /* TerminalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C683C3202C2262008E7F75 /* TerminalViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E157D48E202984B6007556D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E157D46A202984B6007556D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E157D471202984B6007556D8;
+			remoteInfo = WiFiNetworks;
+		};
+		E157D499202984B6007556D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E157D46A202984B6007556D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E157D471202984B6007556D8;
+			remoteInfo = WiFiNetworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E157D472202984B6007556D8 /* WiFiNetworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiNetworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E157D475202984B6007556D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E157D476202984B6007556D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E157D478202984B6007556D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E157D479202984B6007556D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E157D47C202984B6007556D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E157D47F202984B6007556D8 /* WiFiNetworks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WiFiNetworks.xcdatamodel; sourceTree = "<group>"; };
+		E157D481202984B6007556D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E157D484202984B6007556D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E157D486202984B6007556D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E157D487202984B6007556D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E157D48D202984B6007556D8 /* WiFiNetworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFiNetworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E157D491202984B6007556D8 /* WiFiNetworksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WiFiNetworksTests.m; sourceTree = "<group>"; };
+		E157D493202984B6007556D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E157D498202984B6007556D8 /* WiFiNetworksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFiNetworksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E157D49C202984B6007556D8 /* WiFiNetworksUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WiFiNetworksUITests.m; sourceTree = "<group>"; };
+		E157D49E202984B6007556D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E157D4AB202984D8007556D8 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		E157D4AD202984D8007556D8 /* WiFiNetworks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WiFiNetworks.entitlements; sourceTree = "<group>"; };
+		E157D4AE20299578007556D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E1AE0A38202AF70900695C58 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		E1AE0A39202AF70900695C58 /* DeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		E1AE0A40202B1E9400695C58 /* SocketConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketConnection.h; sourceTree = "<group>"; };
+		E1AE0A41202B1E9400695C58 /* SocketConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketConnection.m; sourceTree = "<group>"; };
+		E1AE0A43202B2E2300695C58 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E1AE0A44202B2E2300695C58 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E1B0BE062029D7F4009C9490 /* HFSmartLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSmartLink.h; sourceTree = "<group>"; };
+		E1B0BE072029D7F4009C9490 /* libSmartLink7.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSmartLink7.3.a; sourceTree = "<group>"; };
+		E1B0BE082029D7F4009C9490 /* HFSmartLinkDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSmartLinkDeviceInfo.h; sourceTree = "<group>"; };
+		E1C683C2202C2262008E7F75 /* TerminalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalViewController.h; sourceTree = "<group>"; };
+		E1C683C3202C2262008E7F75 /* TerminalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E157D46F202984B6007556D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B0BE092029D7F4009C9490 /* libSmartLink7.3.a in Frameworks */,
+				E157D4AF20299578007556D8 /* SystemConfiguration.framework in Frameworks */,
+				E157D4AC202984D8007556D8 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E157D48A202984B6007556D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E157D495202984B6007556D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E157D469202984B6007556D8 = {
+			isa = PBXGroup;
+			children = (
+				E157D474202984B6007556D8 /* WiFiNetworks */,
+				E157D490202984B6007556D8 /* WiFiNetworksTests */,
+				E157D49B202984B6007556D8 /* WiFiNetworksUITests */,
+				E157D473202984B6007556D8 /* Products */,
+				E157D4AA202984D8007556D8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E157D473202984B6007556D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E157D472202984B6007556D8 /* WiFiNetworks.app */,
+				E157D48D202984B6007556D8 /* WiFiNetworksTests.xctest */,
+				E157D498202984B6007556D8 /* WiFiNetworksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E157D474202984B6007556D8 /* WiFiNetworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE0A3F202B1E3400695C58 /* SocketConnection */,
+				E1AE0A3B202B0EA000695C58 /* Reachability */,
+				E1AE0A36202AF6DB00695C58 /* Model */,
+				E1B0BE052029D318009C9490 /* SmartLinkLib */,
+				E157D4AD202984D8007556D8 /* WiFiNetworks.entitlements */,
+				E157D475202984B6007556D8 /* AppDelegate.h */,
+				E157D476202984B6007556D8 /* AppDelegate.m */,
+				E157D478202984B6007556D8 /* ViewController.h */,
+				E157D479202984B6007556D8 /* ViewController.m */,
+				E1C683C2202C2262008E7F75 /* TerminalViewController.h */,
+				E1C683C3202C2262008E7F75 /* TerminalViewController.m */,
+				E157D47B202984B6007556D8 /* Main.storyboard */,
+				E157D481202984B6007556D8 /* Assets.xcassets */,
+				E157D483202984B6007556D8 /* LaunchScreen.storyboard */,
+				E157D486202984B6007556D8 /* Info.plist */,
+				E157D487202984B6007556D8 /* main.m */,
+				E157D47E202984B6007556D8 /* WiFiNetworks.xcdatamodeld */,
+			);
+			path = WiFiNetworks;
+			sourceTree = "<group>";
+		};
+		E157D490202984B6007556D8 /* WiFiNetworksTests */ = {
+			isa = PBXGroup;
+			children = (
+				E157D491202984B6007556D8 /* WiFiNetworksTests.m */,
+				E157D493202984B6007556D8 /* Info.plist */,
+			);
+			path = WiFiNetworksTests;
+			sourceTree = "<group>";
+		};
+		E157D49B202984B6007556D8 /* WiFiNetworksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E157D49C202984B6007556D8 /* WiFiNetworksUITests.m */,
+				E157D49E202984B6007556D8 /* Info.plist */,
+			);
+			path = WiFiNetworksUITests;
+			sourceTree = "<group>";
+		};
+		E157D4AA202984D8007556D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E157D4AE20299578007556D8 /* SystemConfiguration.framework */,
+				E157D4AB202984D8007556D8 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1AE0A36202AF6DB00695C58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE0A37202AF6E300695C58 /* SmartLink */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1AE0A37202AF6E300695C58 /* SmartLink */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE0A38202AF70900695C58 /* DeviceInfo.h */,
+				E1AE0A39202AF70900695C58 /* DeviceInfo.m */,
+			);
+			path = SmartLink;
+			sourceTree = "<group>";
+		};
+		E1AE0A3B202B0EA000695C58 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE0A44202B2E2300695C58 /* Reachability.h */,
+				E1AE0A43202B2E2300695C58 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		E1AE0A3F202B1E3400695C58 /* SocketConnection */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE0A40202B1E9400695C58 /* SocketConnection.h */,
+				E1AE0A41202B1E9400695C58 /* SocketConnection.m */,
+			);
+			path = SocketConnection;
+			sourceTree = "<group>";
+		};
+		E1B0BE052029D318009C9490 /* SmartLinkLib */ = {
+			isa = PBXGroup;
+			children = (
+				E1B0BE062029D7F4009C9490 /* HFSmartLink.h */,
+				E1B0BE082029D7F4009C9490 /* HFSmartLinkDeviceInfo.h */,
+				E1B0BE072029D7F4009C9490 /* libSmartLink7.3.a */,
+			);
+			path = SmartLinkLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E157D471202984B6007556D8 /* WiFiNetworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E157D4A1202984B6007556D8 /* Build configuration list for PBXNativeTarget "WiFiNetworks" */;
+			buildPhases = (
+				E157D46E202984B6007556D8 /* Sources */,
+				E157D46F202984B6007556D8 /* Frameworks */,
+				E157D470202984B6007556D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiNetworks;
+			productName = WiFiNetworks;
+			productReference = E157D472202984B6007556D8 /* WiFiNetworks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E157D48C202984B6007556D8 /* WiFiNetworksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E157D4A4202984B6007556D8 /* Build configuration list for PBXNativeTarget "WiFiNetworksTests" */;
+			buildPhases = (
+				E157D489202984B6007556D8 /* Sources */,
+				E157D48A202984B6007556D8 /* Frameworks */,
+				E157D48B202984B6007556D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E157D48F202984B6007556D8 /* PBXTargetDependency */,
+			);
+			name = WiFiNetworksTests;
+			productName = WiFiNetworksTests;
+			productReference = E157D48D202984B6007556D8 /* WiFiNetworksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E157D497202984B6007556D8 /* WiFiNetworksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E157D4A7202984B6007556D8 /* Build configuration list for PBXNativeTarget "WiFiNetworksUITests" */;
+			buildPhases = (
+				E157D494202984B6007556D8 /* Sources */,
+				E157D495202984B6007556D8 /* Frameworks */,
+				E157D496202984B6007556D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E157D49A202984B6007556D8 /* PBXTargetDependency */,
+			);
+			name = WiFiNetworksUITests;
+			productName = WiFiNetworksUITests;
+			productReference = E157D498202984B6007556D8 /* WiFiNetworksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E157D46A202984B6007556D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Finoit;
+				TargetAttributes = {
+					E157D471202984B6007556D8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HotspotConfiguration = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					E157D48C202984B6007556D8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E157D471202984B6007556D8;
+					};
+					E157D497202984B6007556D8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E157D471202984B6007556D8;
+					};
+				};
+			};
+			buildConfigurationList = E157D46D202984B6007556D8 /* Build configuration list for PBXProject "WiFiNetworks" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E157D469202984B6007556D8;
+			productRefGroup = E157D473202984B6007556D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E157D471202984B6007556D8 /* WiFiNetworks */,
+				E157D48C202984B6007556D8 /* WiFiNetworksTests */,
+				E157D497202984B6007556D8 /* WiFiNetworksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E157D470202984B6007556D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E157D485202984B6007556D8 /* LaunchScreen.storyboard in Resources */,
+				E157D482202984B6007556D8 /* Assets.xcassets in Resources */,
+				E157D47D202984B6007556D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E157D48B202984B6007556D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E157D496202984B6007556D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E157D46E202984B6007556D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1AE0A42202B1E9400695C58 /* SocketConnection.m in Sources */,
+				E157D47A202984B6007556D8 /* ViewController.m in Sources */,
+				E157D477202984B6007556D8 /* AppDelegate.m in Sources */,
+				E1AE0A45202B2E2300695C58 /* Reachability.m in Sources */,
+				E1AE0A3A202AF70900695C58 /* DeviceInfo.m in Sources */,
+				E157D488202984B6007556D8 /* main.m in Sources */,
+				E1C683C4202C2262008E7F75 /* TerminalViewController.m in Sources */,
+				E157D480202984B6007556D8 /* WiFiNetworks.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E157D489202984B6007556D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E157D492202984B6007556D8 /* WiFiNetworksTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E157D494202984B6007556D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E157D49D202984B6007556D8 /* WiFiNetworksUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E157D48F202984B6007556D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E157D471202984B6007556D8 /* WiFiNetworks */;
+			targetProxy = E157D48E202984B6007556D8 /* PBXContainerItemProxy */;
+		};
+		E157D49A202984B6007556D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E157D471202984B6007556D8 /* WiFiNetworks */;
+			targetProxy = E157D499202984B6007556D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E157D47B202984B6007556D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E157D47C202984B6007556D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E157D483202984B6007556D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E157D484202984B6007556D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E157D49F202984B6007556D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E157D4A0202984B6007556D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E157D4A2202984B6007556D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WiFiNetworks/WiFiNetworks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F7SW76LL6;
+				INFOPLIST_FILE = WiFiNetworks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WiFiNetworks/SmartLinkLib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finoit.WiFiNetworks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E157D4A3202984B6007556D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WiFiNetworks/WiFiNetworks.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F7SW76LL6;
+				INFOPLIST_FILE = WiFiNetworks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WiFiNetworks/SmartLinkLib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finoit.WiFiNetworks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E157D4A5202984B6007556D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F7SW76LL6;
+				INFOPLIST_FILE = WiFiNetworksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.finoit.WiFiNetworksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiFiNetworks.app/WiFiNetworks";
+			};
+			name = Debug;
+		};
+		E157D4A6202984B6007556D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F7SW76LL6;
+				INFOPLIST_FILE = WiFiNetworksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.finoit.WiFiNetworksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiFiNetworks.app/WiFiNetworks";
+			};
+			name = Release;
+		};
+		E157D4A8202984B6007556D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F7SW76LL6;
+				INFOPLIST_FILE = WiFiNetworksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.finoit.WiFiNetworksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiFiNetworks;
+			};
+			name = Debug;
+		};
+		E157D4A9202984B6007556D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F7SW76LL6;
+				INFOPLIST_FILE = WiFiNetworksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.finoit.WiFiNetworksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiFiNetworks;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E157D46D202984B6007556D8 /* Build configuration list for PBXProject "WiFiNetworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E157D49F202984B6007556D8 /* Debug */,
+				E157D4A0202984B6007556D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E157D4A1202984B6007556D8 /* Build configuration list for PBXNativeTarget "WiFiNetworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E157D4A2202984B6007556D8 /* Debug */,
+				E157D4A3202984B6007556D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E157D4A4202984B6007556D8 /* Build configuration list for PBXNativeTarget "WiFiNetworksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E157D4A5202984B6007556D8 /* Debug */,
+				E157D4A6202984B6007556D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E157D4A7202984B6007556D8 /* Build configuration list for PBXNativeTarget "WiFiNetworksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E157D4A8202984B6007556D8 /* Debug */,
+				E157D4A9202984B6007556D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E157D47E202984B6007556D8 /* WiFiNetworks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E157D47F202984B6007556D8 /* WiFiNetworks.xcdatamodel */,
+			);
+			currentVersion = E157D47F202984B6007556D8 /* WiFiNetworks.xcdatamodel */;
+			path = WiFiNetworks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E157D46A202984B6007556D8 /* Project object */;
+}
