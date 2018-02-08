@@ -1,0 +1,6 @@
+framework module Pods_WiFiNetworks {
+  umbrella header "Pods-WiFiNetworks-umbrella.h"
+
+  export *
+  module * { export * }
+}
