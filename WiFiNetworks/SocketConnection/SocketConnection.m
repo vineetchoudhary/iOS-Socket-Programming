@@ -8,10 +8,13 @@
 
 #import "SocketConnection.h"
 
+#define HF11A_SOCKET_HOST @"192.168.22.97"
 #define HF11A_SOCKET_PORT 48899
+#define UseCocoaAsyncSocket 1
 
 NSString * const kDeviceListUpdateNotification = @"DeviceListUpdateNotification";
-NSString * const kNormalMessageRecevicedNotification = @"NormalMessageRecevicedNotification";
+NSString * const kMessageSendNotification = @"MessageSendNotification";
+NSString * const kMessageRecevicedNotification = @"NormalMessageRecevicedNotification";
 
 @implementation SocketConnection {
     //socket setting
@@ -30,12 +33,85 @@ NSString * const kNormalMessageRecevicedNotification = @"NormalMessageRecevicedN
     static SocketConnection *socketConnection = nil;
     if (socketConnection == nil) {
         socketConnection = [[SocketConnection alloc] init];
-        [socketConnection setupUdpClient];
-        [socketConnection receivePacketFromDevice];
-        [socketConnection sendBroadcastPacket:@"HF-A11ASSISTHREAD"];
+        [socketConnection connectSocket];
     }
     return socketConnection;
 }
+
+-(void)connectSocket{
+    if (UseCocoaAsyncSocket) {
+        self.udpSocket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue() socketQueue:dispatch_get_main_queue()];
+        NSError *error;
+        
+        if([self.udpSocket connectToHost:HF11A_SOCKET_HOST onPort:HF11A_SOCKET_PORT error:&error]){
+            NSData *packet = [@"HF-A11ASSISTHREAD" dataUsingEncoding:NSUTF8StringEncoding];
+            if (![self.udpSocket beginReceiving:&error]) {
+                NSLog(@"GCDAsyncUdpSocket - Receive init Error - %@", error.localizedDescription);
+            }
+            [self.udpSocket sendData:packet withTimeout:30 tag:1];
+        } else {
+            NSLog(@"GCDAsyncUdpSocket - Connection Error - %@", error.localizedDescription);
+        }
+    } else {
+        [self setupUdpClient];
+        [self receivePacketFromDevice];
+        [self sendBroadcastPacket:@"HF-A11ASSISTHREAD"];
+    }
+}
+
+-(void)reconnectSocket{
+    [self connectSocket];
+}
+
+
+#pragma mark - GCDAsyncUdpSocket -
+
+#pragma mark Delegate
+
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didConnectToAddress:(NSData *)address {
+    NSString *addressString = [[NSString alloc] initWithData:address encoding:NSUTF8StringEncoding];
+    NSLog(@"GCDAsyncUdpSocket - Connected to address - %@", addressString);
+}
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotConnect:(NSError * _Nullable)error{
+    NSLog(@"GCDAsyncUdpSocket - Error - %@", error.localizedDescription);
+}
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didSendDataWithTag:(long)tag {
+    NSLog(@"GCDAsyncUdpSocket - Send data with tag - %ld", tag);
+}
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError * _Nullable)error{
+    NSLog(@"GCDAsyncUdpSocket - Didn't send data with tag - %ld and Error - %@", tag, error.localizedDescription);
+}
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data fromAddress:(NSData *)address withFilterContext:(nullable id)filterContext{
+    NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *addressString = [[NSString alloc] initWithData:address encoding:NSUTF8StringEncoding];
+    NSLog(@"GCDAsyncUdpSocket - Received data - %@ from address - %@ and filter context - %@", dataString, addressString, filterContext);
+    [[NSNotificationCenter defaultCenter] postNotificationName:kMessageRecevicedNotification object:dataString];
+}
+
+
+- (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError  * _Nullable)error {
+    NSLog(@"GCDAsyncUdpSocket - Socket did close - Error - %@", error.localizedDescription);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark - Low level UDP connections -
 
 -(void)setupUdpClient{
     //this function is to establish a client to send out broad cast to devices. App will call sendBroadcastPacket later to send broadcast packets using the socket created in this function.
@@ -168,7 +244,7 @@ NSString * const kNormalMessageRecevicedNotification = @"NormalMessageRecevicedN
                 if (myRange.location == NSNotFound){
                     NSLog(@"UDP Server - ReceivePacketFromDevice - Normal msg: %@", string);
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [[NSNotificationCenter defaultCenter] postNotificationName:kNormalMessageRecevicedNotification object:string];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:kMessageRecevicedNotification object:string];
                     });
                 } else {
                     NSLog(@"UDP Server - ReceivePacketFromDevice - Device Info msg : %@",string);
@@ -202,6 +278,11 @@ NSString * const kNormalMessageRecevicedNotification = @"NormalMessageRecevicedN
 }
 
 -(void)sendBroadcastPacket:(NSString *)cmd{
+    if (UseCocoaAsyncSocket) {
+        NSData *packet = [cmd dataUsingEncoding:NSUTF8StringEncoding];
+        [self.udpSocket sendData:packet withTimeout:30 tag:1];
+        return;
+    }
     char buffer[255];
     bzero(buffer,255);
     char request[100];

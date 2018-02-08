@@ -15,17 +15,22 @@
 
 #import "DeviceInfo.h"
 
-@interface SocketConnection : NSObject{
+@import CocoaAsyncSocket;
+
+@interface SocketConnection : NSObject <GCDAsyncUdpSocketDelegate>{
     
 }
 
 extern NSString *const kDeviceListUpdateNotification;
-extern NSString *const kNormalMessageRecevicedNotification;
+extern NSString *const kMessageSendNotification;
+extern NSString *const kMessageRecevicedNotification;
 
 @property(nonatomic, strong) NSMutableArray<DeviceInfo *> *deviceList;
+@property(nonatomic, strong) GCDAsyncUdpSocket *udpSocket;
 
 +(SocketConnection *)shared;
 -(void)setupUdpClient;
+-(void)reconnectSocket;
 -(void)sendBroadcastPacket;
 -(void)receivePacketFromDevice;
 -(void)sendBroadcastPacket:(NSString *)cmd;

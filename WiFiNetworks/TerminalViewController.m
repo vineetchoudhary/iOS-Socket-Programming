@@ -16,15 +16,20 @@
     [super viewDidLoad];
     self.title = @"Terminal";
     socketConnection = [SocketConnection shared];
+    if (!socketConnection.udpSocket.isConnected) {
+        [socketConnection reconnectSocket];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserverForName:kDeviceListUpdateNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        commandOutputTextView.text = [NSString stringWithFormat:@"UDP Server Device - %@\n%@", note.object, commandOutputTextView.text];
+        commandOutputTextView.text = [NSString stringWithFormat:@"UDP Server Device - %@%@", note.object, commandOutputTextView.text];
     }];
-    [[NSNotificationCenter defaultCenter] addObserverForName:kNormalMessageRecevicedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        commandOutputTextView.text = [NSString stringWithFormat:@"UDP Server Normal Msg - %@\n%@", note.object, commandOutputTextView.text];
+    [[NSNotificationCenter defaultCenter] addObserverForName:kMessageRecevicedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        if ([note.object length] > 1) {
+            commandOutputTextView.text = [NSString stringWithFormat:@"Recevie - %@%@", note.object, commandOutputTextView.text];
+        }
     }];
 }
 
@@ -35,7 +40,9 @@
 
 - (IBAction)sendButtonTapped:(UIButton *)sender {
     if (commandInputTextField.text.length > 0) {
+        commandOutputTextView.text = [NSString stringWithFormat:@"Send - %@\n%@", commandInputTextField.text, commandOutputTextView.text];
         [socketConnection sendBroadcastPacket:commandInputTextField.text];
+        [commandInputTextField setText:@""];
     } else {
         NSLog(@"Input command first...");
     }
